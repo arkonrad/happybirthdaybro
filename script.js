@@ -18,18 +18,17 @@ for (let i = 0; i < columns; i++) {
 
 // ========== Flip Boxes ==========
 const flipBoxImages = [
-  'https://i.imgur.com/dhQeoIX.jpeg',
-  'https://i.imgur.com/2lYw3bD.jpeg',
-  'https://i.imgur.com/3Q2Qw1g.jpeg',
-  'https://i.imgur.com/4nQw2kP.jpeg',
-  'https://i.imgur.com/5nQw3kQ.jpeg',
-  'https://i.imgur.com/6nQw4kR.jpeg',
-  'https://i.imgur.com/7nQw5kS.jpeg',
-  'https://i.imgur.com/8nQw6kT.jpeg',
-  'https://i.imgur.com/9nQw7kU.jpeg',
-  'https://i.imgur.com/AnQw8kV.jpeg',
-  'https://i.imgur.com/BnQw9kW.jpeg',
-  'https://i.imgur.com/CnQw0kX.jpeg'
+    'https://i.imgur.com/dhQeoIX.jpeg',
+  'https://i.imgur.com/H2ZUg8a.jpeg',
+  'https://i.imgur.com/G2YMUpJ.jpeg',
+  'https://i.imgur.com/4IxgXWh.jpeg',
+  'https://i.imgur.com/w7yatWv.jpeg',
+  'https://i.imgur.com/ETnbewE.jpeg',
+  'https://i.imgur.com/2EuFild.jpeg',
+  'https://i.imgur.com/8w2rQP6.jpeg',
+  'https://i.imgur.com/Q1iN7KX.jpeg',
+  'https://i.imgur.com/szy1m1o.jpeg',
+  'https://i.imgur.com/MKKmBjt.jpeg'
 ];
 
 const flipboxSection = document.getElementById('flipbox-section');
@@ -116,4 +115,5 @@ flipboxSection.addEventListener('touchstart', function(e) {
       }, 300);
     }
   }
+
 }, {passive:true});
