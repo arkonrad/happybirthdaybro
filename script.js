@@ -18,9 +18,9 @@ for (let i = 0; i < columns; i++) {
 
 // ========== Flip Boxes ==========
 const flipBoxImages = [
-    'https://i.imgur.com/dhQeoIX.jpeg',
+  'https://i.imgur.com/dhQeoIX.jpeg',
   'https://i.imgur.com/H2ZUg8a.jpeg',
-    'https://i.imgur.com/82wuuM1.jpeg',
+  'https://i.imgur.com/82wuuM1.jpeg',
   'https://i.imgur.com/G2YMUpJ.jpeg',
   'https://i.imgur.com/4IxgXWh.jpeg',
   'https://i.imgur.com/w7yatWv.jpeg',
@@ -118,4 +118,5 @@ flipboxSection.addEventListener('touchstart', function(e) {
   }
 
 }, {passive:true});
+
 
