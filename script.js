@@ -1,6 +1,6 @@
 // ========== UNLOCK FEATURE CONFIGURATION ==========
 // Set this to true to enable testing, false to use date check
-const UNLOCK_ENABLED = true;
+const UNLOCK_ENABLED = false;
 
 // ========== Emoji Columns Background ==========
 const emojiList = ['🎂','🎉','🎈','🥳','🍰'];
