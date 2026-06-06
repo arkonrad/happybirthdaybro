@@ -261,6 +261,30 @@ body {
   transform: scale(1.04);
 }
 
+/* Anniversary link - appears after unlock */
+.anniversary-link {
+  margin-top: 2rem;
+  font-family: 'Fredoka One', 'Baloo 2', cursive, sans-serif;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6ec4 0%, #f7971e 100%);
+  border-radius: 1.2rem;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 4px 15px #ff6ec433;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  user-select: none;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+.anniversary-link:hover, .anniversary-link:focus {
+  background: linear-gradient(90deg, #f7971e 0%, #ff6ec4 100%);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px #ff6ec466;
+}
+.anniversary-link:active {
+  transform: scale(0.95);
+}
+
 /* Do not click box in the corner */
 .do-not-click-box {
   position: fixed;
@@ -343,6 +367,10 @@ body {
     bottom: 1rem;
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
+  }
+  .anniversary-link {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 700px) {
