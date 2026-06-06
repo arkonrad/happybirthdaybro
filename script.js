@@ -1,3 +1,7 @@
+// ========== UNLOCK FEATURE CONFIGURATION ==========
+// Set this to true to enable testing, false to use date check
+const UNLOCK_ENABLED = true;
+
 // ========== Emoji Columns Background ==========
 const emojiList = ['🎂','🎉','🎈','🥳','🍰'];
 const columns = 12;
@@ -15,6 +19,49 @@ for (let i = 0; i < columns; i++) {
     }
     emojiBg.appendChild(col);
 }
+
+// ========== Lock Notice Unlock Feature ==========
+const lockNotice = document.querySelector('.lock-notice');
+const lockHint = document.querySelector('.lock-hint');
+
+function isUnlockTime() {
+  if (UNLOCK_ENABLED) return true;
+  const unlockDate = new Date('2026-06-09').getTime();
+  return Date.now() >= unlockDate;
+}
+
+function handleUnlock() {
+  // Hide lock notice and hint
+  lockNotice.style.display = 'none';
+  lockHint.style.display = 'none';
+  
+  // Create and show anniversary link
+  const anniversaryLink = document.createElement('a');
+  anniversaryLink.href = 'http://arkonrad.github.io/2yearanniversary/';
+  anniversaryLink.className = 'anniversary-link';
+  anniversaryLink.textContent = '💝 Click to open';
+  
+  // Insert after flipbox-section
+  const flipboxSection = document.getElementById('flipbox-section');
+  flipboxSection.parentNode.insertBefore(anniversaryLink, flipboxSection.nextSibling);
+}
+
+// Check if it's unlock time on page load
+if (isUnlockTime()) {
+  handleUnlock();
+} else {
+  // Add click handler to unlock button for early testing
+  lockNotice.addEventListener('click', () => {
+    handleUnlock();
+  });
+  lockNotice.style.cursor = 'pointer';
+}
+
+lockNotice.addEventListener('keydown', (e) => {
+  if ((e.key === "Enter" || e.key === " ") && !isUnlockTime()) {
+    handleUnlock();
+  }
+});
 
 // ========== Flip Boxes ==========
 const flipBoxImages = [
@@ -118,5 +165,3 @@ flipboxSection.addEventListener('touchstart', function(e) {
   }
 
 }, {passive:true});
-
-
